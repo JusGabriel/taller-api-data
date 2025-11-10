@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Chistes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="joke-content">
+  <div class="main-joke-container">
+    <h2>Chistes</h2>
+
+    <ion-button expand="full" class="fetch-btn" (click)="fetchJoke()">
+      Nuevo chiste
+    </ion-button>
+
+    <div *ngIf="loading" class="loading-text">Cargando...</div>
+
+    <div *ngIf="joke && !loading" class="joke-box">
+      <p *ngIf="joke.type === 'single'">{{ joke.joke }}</p>
+      <div *ngIf="joke.type === 'twopart'">
+        <p>{{ joke.setup }}</p>
+        <p><strong>{{ joke.delivery }}</strong></p>
+      </div>
+    </div>
+
+    <ion-button expand="full" color="secondary" class="fetch-btn" (click)="goHome()">
+      Volver al inicio
+    </ion-button>
+  </div>
+</ion-content>

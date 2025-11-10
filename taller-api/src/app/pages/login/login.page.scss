@@ -1,0 +1,91 @@
+/* CONTENEDOR PRINCIPAL DE LOGIN */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 400px;
+  margin: 5% auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* TITULO */
+.login-container .title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* INPUTS */
+.input-item {
+  margin-bottom: 1.5rem;
+  --background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* BOTONES PRINCIPALES */
+.login-button, 
+ion-button[color="secondary"] {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.login-button {
+  --background: linear-gradient(90deg, #2193b0, #6dd5ed);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 150, 255, 0.3);
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 150, 255, 0.4);
+}
+
+ion-button[color="secondary"] {
+  --background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 126, 95, 0.3);
+}
+
+ion-button[color="secondary"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 126, 95, 0.4);
+}
+
+/* BOTON OLVIDO CONTRASEÑA */
+ion-button[fill="clear"] {
+  color: #00bcd4;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+/* ANIMACION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FONDO GENERAL DEL LOGIN */
+ion-content {
+  --background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f4f4f4;
+}

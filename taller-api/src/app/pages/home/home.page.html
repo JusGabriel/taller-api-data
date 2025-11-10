@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      Bienvenido a Mi App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home-content ion-padding">
+  
+  <!-- 🚀 CONTENEDOR PRINCIPAL: Ocupa el espacio restante para centrar y empujar el botón de logout -->
+  <div class="main-content-home">
+    <div class="welcome-container">
+      <h2>¡Hola!</h2>
+      <p>Explora nuestras secciones y diviértete.</p>
+    </div>
+
+    <div class="cards-container">
+      <ion-card (click)="goToJoke()">
+        <ion-card-header>
+          <ion-icon name="happy-outline" size="large"></ion-icon>
+          <ion-card-title>Chistes</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Ríete un rato con chistes al azar.
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card (click)="goToCats()">
+        <ion-card-header>
+          <ion-icon name="paw-outline" size="large"></ion-icon>
+          <ion-card-title>Gatos</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Mira fotos adorables de gatos.
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card (click)="goToDogs()">
+        <ion-card-header>
+          <ion-icon name="paw-outline" size="large"></ion-icon>
+          <ion-card-title>Perros</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Encuentra imágenes divertidas de perros. 🐶
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+  <!-- BOTÓN DE LOGOUT: Queda al final del ion-content, después del main-content-home -->
+  <ion-button expand="block" color="danger" (click)="logout()" class="logout-btn">
+    <ion-icon name="log-out-outline" slot="start"></ion-icon>
+    Cerrar sesión
+  </ion-button>
+</ion-content>

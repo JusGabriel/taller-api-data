@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Gatos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="cats-content">
+  <div class="main-cats-container">
+    <ion-button class="fetch-btn" expand="full" (click)="fetchCat()">Nuevo gato</ion-button>
+
+    <div *ngIf="loading" class="loading-text">Cargando...</div>
+
+    <img *ngIf="catImage && !loading" [src]="catImage" alt="Gato" class="cat-image">
+
+    <ion-button class="go-home-btn" expand="full" (click)="goHome()">Volver al home</ion-button>
+  </div>
+</ion-content>
